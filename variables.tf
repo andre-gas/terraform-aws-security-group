@@ -43,6 +43,12 @@ variable "description" {
   default     = "Security Group managed by Terraform"
 }
 
+variable "region" {
+  description = "The region of security group's VPC"
+  type        = string
+  default     = null
+}
+
 variable "revoke_rules_on_delete" {
   description = "Instruct Terraform to revoke all of the Security Groups attached ingress and egress rules before deleting the rule itself. Enable for EMR."
   type        = bool
